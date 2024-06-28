@@ -7,10 +7,16 @@ class DataIngestionConfig:
     root_dir: Path
     source_URL: str
     local_data_file: Path
-    s3_data_folder: str
-    bucket_name: str
-    train_data_path: Path
-    test_data_path: Path
+    unzip_dir: Path
+
+
+
+@dataclass(frozen=True)
+class PrepareCallbacksConfig:
+    root_dir: Path
+    tensorboard_root_log_dir: Path
+    checkpoint_model_filepath: Path
+
 
 
 @dataclass
@@ -32,12 +38,6 @@ class PrepareBaseModelConfig:
     params_classes: int
 
 
-
-@dataclass(frozen=True)
-class PrepareCallbacksConfig:
-    root_dir: Path
-    tensorboard_root_log_dir: Path
-    checkpoint_model_filepath: Path
 
 
 
