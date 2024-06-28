@@ -32,7 +32,10 @@ class ConfigurationManager:
             root_dir=config.root_dir,
             source_URL=config.source_URL,
             local_data_file=config.local_data_file,
-            unzip_dir=config.unzip_dir 
+            s3_data_folder = config.s3_data_folder,
+            bucket_name = config.bucket_name,
+            train_data_path = config.train_data_path,
+            test_data_path = config.test_data_path
         )
 
         return data_ingestion_config

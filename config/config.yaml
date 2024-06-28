@@ -4,8 +4,14 @@ artifacts_root: artifacts
 data_ingestion:
   root_dir: artifacts/data_ingestion
   source_URL: https://drive.google.com/file/d/1JNIeMZjP_qPGiqYxOndDBoYEapmNC9yW/view?usp=sharing
-  local_data_file: artifacts/data_ingestion/data.zip
+  local_data_file: artifacts/data_ingestion/data
   unzip_dir: artifacts/data_ingestion
+  s3_data_folder: data
+  bucket_name: braintumor12
+  train_data_path: artifacts/data_ingestion/data/train
+  test_data_path: artifacts/data_ingestion/data/test
+
+
 
 
 

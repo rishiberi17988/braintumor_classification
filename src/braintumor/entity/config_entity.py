@@ -7,7 +7,17 @@ class DataIngestionConfig:
     root_dir: Path
     source_URL: str
     local_data_file: Path
-    unzip_dir: Path
+    s3_data_folder: str
+    bucket_name: str
+    train_data_path: Path
+    test_data_path: Path
+
+
+@dataclass
+class DataIngestionArtifact:
+    train_file_path: str
+
+    test_file_path: str
 
 
 @dataclass(frozen=True)
